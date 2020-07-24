@@ -1,0 +1,6 @@
+>> single image test
+python detect_mask_image.py --face-model=./../../face_detector --mask-model=./../face_mask_detector/face_mask_detector_model.h5 --image=./examples/01.jpeg
+
+>> video stream test
+python detect_mask_video.py --face-model=./../../face_detector --mask-model=./../face_mask_detector/face_mask_detector_model.h5
+
