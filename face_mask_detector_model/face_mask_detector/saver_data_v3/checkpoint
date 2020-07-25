@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/karim/CppNd-Capstone-Face-Mask-Detector/face_mask_detector_model/face_mask_detector/saver_data_v3/model"
+all_model_checkpoint_paths: "/home/karim/CppNd-Capstone-Face-Mask-Detector/face_mask_detector_model/face_mask_detector/saver_data_v3/model"

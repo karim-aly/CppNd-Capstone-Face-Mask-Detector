@@ -88,6 +88,8 @@ for i in range(0, detections.shape[2]):
 		(startX, startY) = (max(0, startX), max(0, startY))
 		(endX, endY) = (min(w - 1, endX), min(h - 1, endY))
 
+		print(confidence, startX, startY, endX, endY)
+
 		# extract the face ROI, convert it from BGR to RGB channel
 		# ordering, resize it to 224x224, and preprocess it
 		face = image[startY:endY, startX:endX]
@@ -96,7 +98,7 @@ for i in range(0, detections.shape[2]):
 		face = img_to_array(face)
 		face = preprocess_input(face)
 		face = np.expand_dims(face, axis=0)
-
+		
 		# pass the face through the model to determine if the face
 		# has a mask or not
 		(mask, withoutMask) = model.predict(face)[0]
@@ -108,6 +110,7 @@ for i in range(0, detections.shape[2]):
 
 		# include the probability in the label
 		label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
+		print(max(mask, withoutMask) * 100)
 
 		# display the label and bounding box rectangle on the output
 		# frame

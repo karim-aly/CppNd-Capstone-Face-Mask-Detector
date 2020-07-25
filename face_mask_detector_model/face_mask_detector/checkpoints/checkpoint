@@ -1,2 +1,0 @@
-model_checkpoint_path: "face_mask_detector_model"
-all_model_checkpoint_paths: "face_mask_detector_model"
